@@ -1,0 +1,29 @@
+<h2>{{bucketlist.listname}}</h2>
+{{#if displayBucketListItems}}
+<form method="POST" action="">
+<ul id="bucket-list">
+{{#each bucketlist.activities}}
+
+<!--{{#if this.checked}}
+<li class="checked"> {{this.quantity}} &times; {{this.name}}</li>
+{{else}}
+{{/if}}
+-->
+
+<li>
+
+<a href="/activities/{{this.slug}}">{{this.name}}</a></li>
+
+    Name: {{this.name}} <br />  
+    Address: {{this.address}} <br /> 
+    Description: {{this.description}} <br />
+    Hours: {{this.hours}}</li>
+    Phone Number: {{this.phone}} <br /> 
+    Website: {{this.website}} <br /> </li>
+
+    {{/each}}
+</ul>
+</form>
+{{/if}}
+
+

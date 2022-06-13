@@ -1,0 +1,14 @@
+
+<div class="text-4xl font-serif"><h2>Here are your Options</h2></div>
+{{#each activities}}
+<ul>
+    <li>
+    <a href="/activities/{{this.slug}}">{{this.name}}</a></li>
+    {{this.name}} <br />  
+    {{this.address}} <br /> 
+    {{this.description}} <br />
+    {{this.hours}}</li>
+    {{this.phone}} <br /> 
+    {{this.website}} <br /> </li>
+</ul>
+{{/each}}

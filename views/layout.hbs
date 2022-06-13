@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title></title>
+<link rel='stylesheet' href='/stylesheets/style.css'>
+</head>
+<body>
+<div class="w-full bg-gray-light p-4" id="wrapper">
+<div class="text-xl font-bold" id="hd">
+{{#if user}}
+<div>Logged in as: {{user.username}} (<a href="/logout">Logout</a>)
+</div> 
+{{/if}}
+	<div class="text-2xl font-serif"><h1>Plan-See</h1></div>
+</div>
+<div class="m-8" id="bd">
+{{{body}}}
+</div>
+<div id="ft">
+{{#if user}}
+	<a class="rounded-full bg-blue text-white inline-block border-solid p-4 mb-4"  href="/">Home</a> | 
+	<a class="rounded-full bg-blue text-white inline-block border-solid p-4 mb-4" href="/activities/">All Activities</a> | 
+	<a class="rounded-full bg-blue text-white inline-block border-solid p-4 mb-4" href="/activities/create">Add a New Activity</a> |
+	<a class="rounded-full bg-blue text-white inline-block border-solid p-4 mb-4" href="/bucketlist/">My BucketLists</a> |
+	<a class="rounded-full bg-blue text-white inline-block border-solid p-4 mb-4" href="/planner/">PLAN-SEE OPTIONS</a> |
+	<a class="rounded-full bg-blue text-white inline-block border-solid p-4 mb-4" href="/plannersurprise/">PLAN-SEE SURPRISE</a>	
+{{/if}}
+</div>
+</div>
+</body>
+</html>

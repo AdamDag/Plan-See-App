@@ -1,0 +1,8 @@
+<div class="text-4xl font-serif m-4"><h2>BucketLists</h2></div>
+{{#each bucketlist}}
+<ul>
+<li><a class="my-8" href="/bucketlist/{{this.slug}}">{{this.listname}}</a> <br /> </li>
+
+</ul>
+{{/each}}
+<a class="form-row rounded-full bg-blue text-white inline-block border-solid p-4 mb-4" href="/bucketlist/create">Add a New Bucketlist</a>

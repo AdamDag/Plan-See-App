@@ -1,0 +1,25 @@
+<div class="text-4xl font-serif"><h2>Activities</h2></div>
+<form method="POST" action="/bucketlist/activityadd">
+<select name="bucketlist" id="bucketlist-select">
+    <option value="">--Please choose an option--</option> 
+    {{#each bucketlist}}
+    <option value={{this.slug}}>{{this.listname}}</option>
+    {{/each}}
+</select>
+<div class="form-row rounded-full bg-blue text-white inline-block border-solid p-4 mb-4"><input type="submit" value="Add to List">
+</div>
+{{#each activities}}
+<div class="font-serif"> 
+<ul>
+    <li><input type="checkbox" name= Activity value="{{this.slug}}">
+    <a href="/activities/{{this.slug}}">{{this.name}}</a></li>
+    {{this.name}} <br />  
+    {{this.address}} <br /> 
+    {{this.description}} <br />
+    {{this.hours}}<br />
+    {{this.phone}} <br /> 
+    {{this.website}} <br /> </li>
+</ul>
+</div>
+{{/each}}
+</form>
